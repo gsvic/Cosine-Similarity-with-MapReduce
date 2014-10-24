@@ -14,11 +14,6 @@
  * limitations under the License.
  */
 
-/**
- *
- * @author gsvic
- */
-
 package com.gsvic.csmr;
 
 import java.io.IOException;
