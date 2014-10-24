@@ -19,3 +19,10 @@ Instructions
 * Build CSMR: `mvn install`
 * Run CSMR: `hadoop -jarCSMR-0.1-jar-with-dependencies.jar main TFIDF_VECTORS_FOLDER/part-m-00000 OUTPUT_FOLDER`
 * See the results: `cat OUTPUT_FOLDER/part-r-00000`
+
+Additional Links
+====
+* http://hadoop.apache.org/
+* https://mahout.apache.org/
+* http://en.wikipedia.org/wiki/Tf%E2%80%93idf
+* http://en.wikipedia.org/wiki/Cosine_similarity
