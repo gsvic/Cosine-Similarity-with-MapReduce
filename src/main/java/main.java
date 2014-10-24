@@ -14,11 +14,6 @@
  * limitations under the License.
  */
 
-/**
- *
- * @author gsvic
- */
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.mapreduce.Job;
 import com.gsvic.csmr.*;
