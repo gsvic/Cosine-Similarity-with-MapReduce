@@ -23,11 +23,6 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 import org.apache.mahout.math.VectorWritable;
 
-/**
- *
- * @author gsvic
- */
-
 public final class DocumentWritable implements Writable {
     private Text key;
     private VectorWritable value;
