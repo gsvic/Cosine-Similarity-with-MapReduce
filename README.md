@@ -20,7 +20,7 @@ Instructions
 * Run CSMR: `hadoop -jarCSMR-0.1-jar-with-dependencies.jar main TFIDF_VECTORS_FOLDER/part-m-00000 OUTPUT_FOLDER`
 * See the results: `cat OUTPUT_FOLDER/part-r-00000`
 
-Additional Links
+Related Links
 ====
 * http://hadoop.apache.org/
 * https://mahout.apache.org/
