@@ -19,7 +19,7 @@ Instructions
 * Go to the CSMR directory: `cd CSMR`
 * Build CSMR: `mvn install`
 * Run CSMR: `hadoop -jar CSMR-0.1-jar-with-dependencies.jar main TFIDF_VECTORS_FOLDER/part-m-00000 OUTPUT_FOLDER`
-* See the results: `cat OUTPUT_FOLDER/part-r-00000`
+* See the results: `cat OUTPUT_FOLDER/Results/part-r-00000`
 
 Related Links
 ====
