@@ -15,7 +15,7 @@ Instructions
 ====
 * Convert your input documents folder into hadoop sequence files.
 * Clone the repository in a local folder: `git clone git@github.com:gsvic/CSMR.git`
-* Go to the directory CSMR: `cd CSMR`
+* Go to the CSMR directory: `cd CSMR`
 * Build CSMR: `mvn install`
 * Run CSMR: `hadoop -jar CSMR-0.1-jar-with-dependencies.jar main TFIDF_VECTORS_FOLDER/part-m-00000 OUTPUT_FOLDER`
 * See the results: `cat OUTPUT_FOLDER/part-r-00000`
