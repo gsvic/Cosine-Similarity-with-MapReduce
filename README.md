@@ -13,7 +13,8 @@ Link: http://link.springer.com/chapter/10.1007%2F978-3-662-44722-2_23
 
 Instructions
 ====
-* Convert your input documents folder into hadoop sequence files.
+* Convert your input documents folder into hadoop sequence files with Mahout (`seqdirectory`)
+* Convert the sequence files to tf-idf vectors with Mahout (`seq2sparse`)
 * Clone the repository in a local folder: `git clone git@github.com:gsvic/CSMR.git`
 * Go to the CSMR directory: `cd CSMR`
 * Build CSMR: `mvn install`
