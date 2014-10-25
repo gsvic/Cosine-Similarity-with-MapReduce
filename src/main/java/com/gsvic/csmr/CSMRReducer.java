@@ -18,24 +18,23 @@ package com.gsvic.csmr;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.mahout.math.VectorWritable;
-import org.apache.mahout.common.distance.CosineDistanceMeasure;
 
 public class CSMRReducer extends Reducer<IntWritable, DocumentWritable ,Text, 
-        DoubleWritable> {
+        VectorArrayWritable> {
     
     private ArrayList<DocumentWritable> al;
     private VectorWritable[] val;
+    private VectorArrayWritable vaw; 
     
     @Override
     public void reduce(IntWritable key, Iterable<DocumentWritable> values, 
             Context context) throws IOException, InterruptedException{
         al = new ArrayList();
-        DocumentWritable pair;
+        vaw = new VectorArrayWritable();
         
         /* Storing each key-value pair (document) in a java.util.ArrayList */
         for (DocumentWritable v : values){
@@ -57,15 +56,13 @@ public class CSMRReducer extends Reducer<IntWritable, DocumentWritable ,Text,
                     val[0] = new VectorWritable(al.get(i).getValue().get());
                     //Second Document (docj)
                     val[1] = new VectorWritable(al.get(j).getValue().get());
-                    
-                    /*Measuring the cosine similarity of the current 
-                        document pair*/
-                    CosineDistanceMeasure cdm = new CosineDistanceMeasure();
-                    double dist = cdm.distance(val[0].get(), val[1].get());
-                    context.write(new Text(k), new DoubleWritable(dist));
+                    vaw.set(val);
+
+                    context.write(new Text(k), vaw);
                 }
             }  
         }
     }
+  
 }
 
