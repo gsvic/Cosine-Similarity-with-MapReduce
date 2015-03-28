@@ -13,12 +13,10 @@ Link: http://link.springer.com/chapter/10.1007%2F978-3-662-44722-2_23
 
 Instructions
 ====
-* Convert your input documents folder into hadoop sequence files with Mahout (`seqdirectory`): You can also use bin/toTFIDF.sh script to do this. Just rename your input folder to "input" and run the script. The script and the input folder must be in the same folder.
-* Convert the sequence files to tf-idf vectors with Mahout (`seq2sparse`)
-* Clone the repository in a local folder: `git clone git@github.com:gsvic/CSMR.git`
-* Go to the CSMR directory: `cd CSMR`
+* Go to the CSMR directory: `cd Cosine-Similarity-with-MapReduce`
 * Build CSMR: `mvn install`
-* Run CSMR: `hadoop -jar CSMR-0.1-jar-with-dependencies.jar main TFIDF_VECTORS_FOLDER/part-m-00000 OUTPUT_FOLDER`
+* Add your input folder (name it 'input') with the documents in raw format in Cosine-Similarity-with-MapReduce/bin
+* Run CSMR: `./run-csmr.sh`
 * See the results: `cat OUTPUT_FOLDER/Results/part-r-00000`
 
 Related Links
