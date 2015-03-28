@@ -13,6 +13,7 @@ Link: http://link.springer.com/chapter/10.1007%2F978-3-662-44722-2_23
 
 Instructions
 ====
+* Install Mahout 0.9 version and Hadoop 1.2.1 stable version
 * Go to the CSMR directory: `cd Cosine-Similarity-with-MapReduce`
 * Build CSMR: `mvn install`
 * Add your input folder (name it 'input') with the documents in raw format in Cosine-Similarity-with-MapReduce/bin
